@@ -25,7 +25,7 @@ Generated for `/workspace` (excludes `node_modules`, `.git`, `src/octop/dashboar
 
 | Directory | Files | Lines (approx) |
 |-----------|------:|---------------:|
-| `conftest.py/` | 1 | 11 |
+| `(repo root)` | 1 | 11 |
 | `dashboard/` | 834 | 157,940 |
 | `desktop/` | 3 | 301 |
 | `plugins/` | 4 | 174 |
@@ -94,15 +94,17 @@ Generated for `/workspace` (excludes `node_modules`, `.git`, `src/octop/dashboar
 
 ### GitHub Actions (`.github/workflows/`)
 
-- **`anti-spam-issues.yml`** — workflow `anti-spam-issues`
-- **`auto-tag-on-release.yml`** — workflow `auto-tag-on-release`
-- **`ci.yml`** — workflow `ci`
-- **`codeql.yml`** — workflow `codeql`
-- **`docker-publish.yml`** — workflow `docker-publish`
-- **`fnos-build-fpk.yml`** — workflow `fnos-build-fpk`
-- **`octop-desktop.yml`** — workflow `octop-desktop`
-- **`release.yml`** — workflow `release`
-- **`sync-main-to-develop.yml`** — workflow `sync-main-to-develop`
+| Workflow file | Name | Purpose (summary) |
+|---------------|------|-------------------|
+| `ci.yml` | CI | PR gate: `make install`, lint, typecheck, backend tests (Linux + Windows matrix), frontend lint/typecheck/build |
+| `codeql.yml` | CodeQL | Security static analysis for Python/JS |
+| `release.yml` | Release | Release branch / PyPI publish automation |
+| `auto-tag-on-release.yml` | Auto Tag On Release Merge | Tags `v*` on main after release merge |
+| `sync-main-to-develop.yml` | Sync Main Into Develop | Post-release sync main → develop |
+| `docker-publish.yml` | Docker Publish | Build/push container images |
+| `octop-desktop.yml` | Octop Desktop Package | Desktop artifact build |
+| `fnos-build-fpk.yml` | Build Octop FPK | FNOS `.fpk` packaging |
+| `anti-spam-issues.yml` | Anti-spam issue guard | Issue template / spam heuristics |
 
 ---
 
